@@ -1,0 +1,54 @@
+﻿<h1>Welcome ahmed</h1>
+
+
+
+
+@{
+	//the code written here can be understode as C# for the browser, as the Razor Engine 
+	//gives the browser this ability
+	int x = 5;
+	int age = 22;
+	string password = "hello world";
+
+	if(age > 20)
+	{
+		<h5>age is big</h5>
+	}
+	else
+	{
+		<h5>age is small</h5>
+	}
+}
+
+
+@{
+	int length = 20;
+	if(length == 20)
+	{
+		<h6>length = @length </h6>
+	}
+}
+
+
+@for(int i = 0; i < 5; i++)
+{
+	if (i % 2 == 0){
+	<li>@i</li>
+	}
+}
+
+<!--Inline Expression--> @{/*we use this expression to call variables from c# code '@var_name'*/}
+@{/* Example of Inline Expression :
+<h3>
+	I am @age years old
+</h3>
+*/
+}
+
+<style>  @{/*this code block here the browser will understand it as css file*/}
+	
+</style>
+
+<script> @{/*this code block here the browser will understand it as js file*/}
+	//alert(text);
+</script>

@@ -1,0 +1,36 @@
+﻿
+
+<table class="table table-bordered">
+	<thead>
+
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Product Name</th>
+			<th scope="col">Description</th>
+			<th scope="col">Price</th>
+			<th scope="col">Image</th>
+			<th scope="col">link</th>
+		</tr>
+	</thead>
+	@foreach (Product item in Model)
+	{
+		<tr>
+			<td>@item.ID</td>
+			<td>@item.Name</td>
+			<td>@item.Description</td>
+			<td>@item.Price EGP</td>
+			<td>
+				<img src="/Images/@item.Image" alt="Alternate Text" />
+			</td>
+			<td>
+				<a href="/product/Details/@item.ID">Click Here</a>
+			</td>
+		</tr>
+	}
+
+
+</table>
+
+
+
+
